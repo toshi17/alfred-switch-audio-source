@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.alexlafroscia.alfred-switch-audio</string>
+	<string>com.toshi17.alfred-switch-audio</string>
 	<key>connections</key>
 	<dict>
 		<key>01C1D384-588A-4E64-B466-664C0D6ADE55</key>
@@ -268,7 +268,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Alex LaFroscia</string>
+	<string>Toshiyuki Oike</string>
 	<key>description</key>
 	<string>Change active audio device</string>
 	<key>disabled</key>
@@ -292,8 +292,6 @@
 				<integer>0</integer>
 				<key>hotmod</key>
 				<integer>0</integer>
-				<key>hotstring</key>
-				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -324,7 +322,7 @@
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>keyword</key>
-				<string>audio out</string>
+				<string>aout</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -336,9 +334,9 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>#!/bin/bash
+				<string>#!/bin/zsh
 
-./list_sources.py output</string>
+python3 ./list_sources.py output</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -348,7 +346,7 @@
 				<key>title</key>
 				<string>Change the audio output device</string>
 				<key>type</key>
-				<integer>0</integer>
+				<integer>5</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -385,15 +383,15 @@
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>0</integer>
+				<integer>102</integer>
 				<key>script</key>
-				<string></string>
+				<string>python3 ./set_output_source.py "${1}"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string>./set_output_source.py</string>
 				<key>type</key>
-				<integer>8</integer>
+				<integer>5</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -445,15 +443,15 @@
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>0</integer>
+				<integer>102</integer>
 				<key>script</key>
-				<string></string>
+				<string>python3 ./get_current_output.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string>./get_current_output.py</string>
 				<key>type</key>
-				<integer>8</integer>
+				<integer>5</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -494,8 +492,6 @@
 				<integer>0</integer>
 				<key>hotmod</key>
 				<integer>0</integer>
-				<key>hotstring</key>
-				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -557,7 +553,7 @@
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>toggle audio output</string>
+				<string>toggle aout</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
@@ -588,7 +584,7 @@
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>keyword</key>
-				<string>audio in</string>
+				<string>ain</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -600,9 +596,9 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>#!/bin/bash
+				<string>#!/bin/zsh
 
-./list_sources.py input</string>
+python3 ./list_sources.py output</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -638,8 +634,6 @@
 				<integer>0</integer>
 				<key>hotmod</key>
 				<integer>0</integer>
-				<key>hotstring</key>
-				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -680,15 +674,15 @@
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>0</integer>
+				<integer>102</integer>
 				<key>script</key>
-				<string></string>
+				<string>python3 ./get_current_output.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string>./get_current_input.py</string>
 				<key>type</key>
-				<integer>8</integer>
+				<integer>5</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -703,15 +697,15 @@
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>0</integer>
+				<integer>102</integer>
 				<key>script</key>
-				<string></string>
+				<string>python3 ./set_output_source.py "${1}"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string>./set_input_source.py</string>
 				<key>type</key>
-				<integer>8</integer>
+				<integer>5</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -850,7 +844,7 @@
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>toggle audio input</string>
+				<string>toggle ain</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
@@ -1087,22 +1081,21 @@ Once installed, make sure that the "Environment Variable" that points to the exe
 	<dict>
 		<key>LAST_INPUT</key>
 		<string></string>
-		<key>NEXT_INPUT</key>
-		<string></string>
 		<key>LAST_OUTPUT</key>
+		<string>87</string>
+		<key>NEXT_INPUT</key>
 		<string></string>
 		<key>NEXT_OUTPUT</key>
 		<string></string>
 		<key>SWITCH_AUDIO_SOURCE_PATH</key>
-		<string>/opt/homebrew/bin/SwitchAudioSource</string>
+		<string>/usr/local/bin/SwitchAudioSource</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>SWITCH_AUDIO_SOURCE_PATH</string>
-		<string>LAST_INPUT</string>
 		<string>NEXT_INPUT</string>
-		<string>LAST_OUTPUT</string>
 		<string>NEXT_OUTPUT</string>
+		<string>LAST_INPUT</string>
+		<string>SWITCH_AUDIO_SOURCE_PATH</string>
 	</array>
 	<key>version</key>
 	<string>1.2.0</string>
